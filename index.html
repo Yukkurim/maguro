@@ -1,244 +1,308 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>𝐎𝐒𝐀𝐊𝐀𝐍𝐀/𝓂𝒶𝑔𝓊𝓇ℴ🌍 - Discordサーバーコミュニティ</title>
-  <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>橘海県 - 都市ワールド</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+New&display=swap');
-
-    :root {
-      --bg-color: #f9f9fb;
-      --primary: #5865F2;
-      --accent: #4e4e50;
-      --text: #1c1c1e;
-      --card-bg: #ffffff;
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Zen Kaku Gothic New', 'Roboto', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .alert {
+      background-color: #ff4d4d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-weight: bold;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
 
     header {
-      background: var(--primary);
+      background: url("https://media.discordapp.net/attachments/1341384043631214602/1383267056203468912/2025-06-14_102950.png?ex=684e2b56&is=684cd9d6&hm=1f53ba3835d0c0e86e085ca794c4b61591354747bf1e520217e0c13bc1fee70d&=&format=webp&quality=lossless&width=1858&height=859") center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      padding: 2rem 1rem;
-      text-align: center;
+      text-shadow: 1px 1px 4px black;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin: 0;
     }
 
     header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-
-    .card2 {
-      background: var(--card-bg);
-      border-radius: 12px;
+    .section {
       padding: 2rem;
-      box-shadow: 0 8px 16px var(--shadow);
-      margin-bottom: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 1.5rem;
     }
 
-    .feature {
-      background: #eef0f5;
-      padding: 1rem;
-      border-radius: 8px;
-      font-weight: bold;
-      text-align: center;
+    .features div {
+      background: white;
+      padding: 1.2rem;
+      border-left: 6px solid #2b6dad;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: 0.2s;
     }
 
-    .join-button {
-      display: inline-block;
+    .features div:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .button-group {
       margin-top: 2rem;
-      background-color: var(--primary);
-      color: white;
-      font-size: 1.2rem;
-      padding: 0.75rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    .join-button:hover {
-      background-color: #4752c4;
+    .apply-button, .join-button {
+      background: #2b6dad;
+      color: white;
+      padding: 0.9rem 1.6rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .apply-button:hover, .join-button:hover {
+      background: #1f4e78;
       transform: scale(1.05);
     }
 
-    footer {
+    .news-section h2 {
+      margin-top: 3rem;
+    }
+
+    .news-list {
+      margin-top: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .news-item {
+      background: white;
+      border-left: 5px solid #444;
+      padding: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      border-radius: 6px;
+    }
+
+    .news-item:hover {
+      background: #eee;
+    }
+
+    .footer {
+      background: #111;
+      color: #ccc;
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #888;
     }
 
-    /* Discord Widget Styles */
-    .widget {
-      background: #2b2d31;
-      color: white;
-      border-radius: 12px;
-      padding: 16px;
-      max-width: 360px;
-      margin: 2rem auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-
-    .server-name {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .status {
-      font-size: 14px;
-      margin-bottom: 12px;
+    .footer a {
       color: #aaa;
+      margin: 0 0.7rem;
+      text-decoration: underline;
+      cursor: pointer;
     }
 
-    .members {
-      max-height: 200px;
-      overflow-y: auto;
-      margin-bottom: 12px;
-    }
-
-    .member {
-      display: flex;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-
-    .member img {
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-    }
-
-    .invite {
-      display: block;
-      text-align: center;
-      background: #5865F2;
+    .footer a:hover {
       color: white;
-      padding: 10px;
-      text-decoration: none;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: white;
+      padding: 2rem;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: 10px;
+      position: relative;
+      animation: fadein 0.4s ease;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .modal h2 {
+      margin-top: 0;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .join-code {
+      font-size: 1.5rem;
+      background: #f0f0f0;
+      padding: 1rem;
       border-radius: 8px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-
-    .invite:hover {
-      background: #4752C4;
-    }
-
-    .promo-banner {
-      background: #ff4757;
-      color: #fff;
-      padding: 10px;
       text-align: center;
-      border-radius: 8px;
+      margin-top: 1rem;
       font-weight: bold;
-      font-size: 13px;
-      animation: blink 1.5s infinite alternate;
     }
 
-    @keyframes blink {
-      0% { opacity: 1; }
-      100% { opacity: 0.7; }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      .join-button {
-        font-size: 1rem;
-        padding: 0.6rem 1.5rem;
-      }
+    .news-image {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>𝐎𝐒𝐀𝐊𝐀𝐍𝐀/𝓂𝒶𝑔𝓊𝓇ℴ🌍</h1>
-    <p>気軽に話せる、おさかないっぱいの楽しい場所。</p>
-  </header>
 
-  <div class="container">
-    <div class="card2">
-      <h2>サーバー概要</h2>
-      <div class="features">
-        <div class="feature">メン爆なしだから安心！</div>
-        <div class="feature">独自BOTと独自経済！</div>
-        <div class="feature">下を見ると良いことあるよ！</div>
-      </div>
-      <a class="join-button" href="https://discord.gg/d9eu4Q69Kz" target="_blank">Join</a>
-    </div
+<div class="alert">当サイトは実在する都道府県とは一切関係ありません。</div>
 
-    <div class="widget" id="discord-widget">
-      <div class="server-name">読み込み中...</div>
-      <div class="status"></div>
-      <div class="members"></div>
-      <a class="invite" target="_blank" href="#">参加する</a>
-      <div class="promo-banner">
-        今ならシリアルナンバー入力チャンネルに「2025」を入力で特別ななにかをプレゼント！
-      </div>
-    </div>
+<header>
+  <h1>橘海県 - 都市ワールド</h1>
+  <p>美しいワールドを、あなたと。</p>
+</header>
+
+<div class="section">
+  <div class="features">
+    <div><strong>都市ワールド</strong><br>精緻な都市建築と都市計画が広がるワールドです。</div>
+    <div><strong>インフラ整備</strong><br>道路・鉄道・区画整理</div>
+    <div><strong>活発なメンバー</strong><br>多数のメンバーが日々参加し、活発に建築・交流が行われています。</div>
+    <div><strong>建築には申請が必要</strong><br>秩序ある街づくりのため、建築権を得るには基本的に簡単な申請が必要です。</div>
   </div>
 
-  <footer>
-    &copy; 2025 𝐎𝐒𝐀𝐊𝐀𝐍𝐀/𝓂𝒶𝑔𝓊𝓇ℴ 運営本部 All rights reserved.
-  </footer>
+  <div class="button-group">
+    <a class="apply-button" href="https://docs.google.com/forms/d/e/1FAIpQLScSMM0CyI7fW4chgkRj0mwQ1Ztmz9AfDQ0x0wa7xrw60YuOEA/viewform" target="_blank">建築メンバー申請</a>
+    <button class="join-button" onclick="handleJoin()">参加する</button>
+  </div>
 
-  <script>
-    const GUILD_ID = '1310262972760719390'; // ← ← ← あなたのサーバーID
-    const WIDGET_URL = `https://discord.com/api/guilds/${GUILD_ID}/widget.json`;
+  <div class="news-section">
+    <h2>お知らせ</h2>
+    <div class="news-list" id="newsList"></div>
+  </div>
+</div>
 
-    fetch(WIDGET_URL)
-      .then(response => response.json())
-      .then(data => {
-        document.querySelector('.server-name').textContent = data.name;
-        document.querySelector('.status').textContent = `オンライン: ${data.presence_count}人`;
-        const memberList = document.querySelector('.members');
-        data.members.forEach(member => {
-          const div = document.createElement('div');
-          div.className = 'member';
-          div.innerHTML = `<img src="${member.avatar_url}" alt=""> ${member.username}`;
-          memberList.appendChild(div);
-        });
-        document.querySelector('.invite').href = data.instant_invite;
-      })
-      .catch(err => {
-        document.querySelector('#discord-widget').innerHTML = '<p>Discordウィジェットの読み込みに失敗しました。</p>';
-        console.error(err);
-      });
-  </script>
+<div class="footer">
+  <div>© 橘海県 ゆっくりーむ鯖 - Kikkai City Project</div>
+  <div>
+    <a onclick="openModal('terms')">利用規約</a>
+    <a onclick="openModal('privacy')">プライバシーポリシー</a>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent">
+    <span class="modal-close" onclick="closeModal()">✕</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+  const newsData = [
+    {
+      title: "ホームページ完成",
+      date: "2025年6月14日",
+      content: "橘海県の公式ホームページが完成しました！ここではメンテナンス情報やお知らせを配信します！",
+      image: "https://media.discordapp.net/attachments/1341384043631214602/1383318492987523124/53a9b5a7b485be36.png?ex=684e5b3d&is=684d09bd&hm=407a4e3df9d0058138ed57cfffa3b54655ec062520da85b63476456b00222658&=&format=webp&quality=lossless&width=1526&height=859"
+    },
+    {
+      title: "国道一号線完成",
+      date: "2025年6月13日",
+      content: "橘海市に国道一号線が完成しました。",
+      image: "https://media.discordapp.net/attachments/1341384043631214602/1383280035363815465/image.png?ex=684e376c&is=684ce5ec&hm=5b710dea9529c4b2388ffeb383efc7fd54a4835b01ec5e528cc78fa9a67cf4d2&=&format=webp&quality=lossless&width=434&height=164"
+    },
+    {
+      title: "新路線が開通",
+      date: "2025年6月13日",
+      content: "新たに水野交通、YR,西武鉄道の路線が開通しました。",
+      image: "https://media.discordapp.net/attachments/1341384043631214602/1383267056203468912/2025-06-14_102950.png?ex=684e2b56&is=684cd9d6&hm=1f53ba3835d0c0e86e085ca794c4b61591354747bf1e520217e0c13bc1fee70d&=&format=webp&quality=lossless&width=1858&height=859"
+    }
+  ];
+
+  const newsList = document.getElementById("newsList");
+  newsData.forEach((item, i) => {
+    const div = document.createElement("div");
+    div.className = "news-item";
+    div.innerHTML = `<strong>${item.title}</strong><br><small>${item.date}</small>`;
+    div.onclick = () => {
+      document.getElementById("modalBody").innerHTML = `
+        <h2>${item.title}</h2>
+        <p><i>${item.date}</i></p>
+        <p>${item.content}</p>
+        ${item.image ? `<img src="${item.image}" class="news-image" />` : ""}
+      `;
+      document.getElementById("modalOverlay").style.display = "flex";
+    };
+    newsList.appendChild(div);
+  });
+
+  function handleJoin() {
+      window.open("https://realms.gg/eDYtsbffJmTgKJo", "_blank");
+    }
+
+  function openModal(type) {
+    const body = document.getElementById('modalBody');
+    if (type === 'terms') {
+      body.innerHTML = `<h2>利用規約</h2><ul>
+      <li>他プレイヤーへの迷惑行為・妨害は禁止</li>
+      <li>他プレイヤー破壊禁止</li>
+      <li>建築メンバーのルール遵守義務</li>
+　　　<li>運営からの指示には従ってください</li>
+      <li>違反時はBAN等の処置を行います</li></ul>`;
+    } else if (type === 'privacy') {
+      body.innerHTML = `<h2>プライバシーポリシー</h2><p>建築申請フォームで収集された情報は、審査・サーバー管理にのみ使用します。外部への提供は一切ありません。</p>`;
+    } else if (type === 'join') {
+      body.innerHTML = `<h2>スマホやSwitchでの参加方法</h2><p>Minecraftアプリの「Realmに参加」から以下のコードを入力：</p><div class="join-code">eDYtsbffJmTgKJo</div>`;
+    }
+    document.getElementById('modalOverlay').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
