@@ -150,6 +150,8 @@
       z-index: 1000;
     }
 
+
+    
     .modal {
       background: white;
       padding: 2rem;
@@ -216,6 +218,7 @@
   <div class="button-group">
     <a class="apply-button" href="https://docs.google.com/forms/d/e/1FAIpQLScSMM0CyI7fW4chgkRj0mwQ1Ztmz9AfDQ0x0wa7xrw60YuOEA/viewform" target="_blank">建築メンバー申請</a>
     <button class="join-button" onclick="handleJoin()">参加する</button>
+    <a class="apply-button" href="https://discord.gg/ensAH9qhc9" target="_blank" rel="noopener noreferrer">公式Discord 鯖に参加する</a>
   </div>
 
   <div class="news-section">
@@ -293,8 +296,6 @@
       <li>違反時はBAN等の処置を行います</li></ul>`;
     } else if (type === 'privacy') {
       body.innerHTML = `<h2>プライバシーポリシー</h2><p>建築申請フォームで収集された情報は、審査・サーバー管理にのみ使用します。外部への提供は一切ありません。</p>`;
-    } else if (type === 'join') {
-      body.innerHTML = `<h2>スマホやSwitchでの参加方法</h2><p>Minecraftアプリの「Realmに参加」から以下のコードを入力：</p><div class="join-code">eDYtsbffJmTgKJo</div>`;
     }
     document.getElementById('modalOverlay').style.display = 'flex';
   }
