@@ -1,309 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>橘海県 - 都市ワールド</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-
-    .alert {
-      background-color: #ff4d4d;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-weight: bold;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
-    }
-
-    header {
-      background: url("https://media.discordapp.net/attachments/1341384043631214602/1383267056203468912/2025-06-14_102950.png?ex=684e2b56&is=684cd9d6&hm=1f53ba3835d0c0e86e085ca794c4b61591354747bf1e520217e0c13bc1fee70d&=&format=webp&quality=lossless&width=1858&height=859") center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 1px 1px 4px black;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-
-    .section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .features {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .features div {
-      background: white;
-      padding: 1.2rem;
-      border-left: 6px solid #2b6dad;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: 0.2s;
-    }
-
-    .features div:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .button-group {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .apply-button, .join-button {
-      background: #2b6dad;
-      color: white;
-      padding: 0.9rem 1.6rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .apply-button:hover, .join-button:hover {
-      background: #1f4e78;
-      transform: scale(1.05);
-    }
-
-    .news-section h2 {
-      margin-top: 3rem;
-    }
-
-    .news-list {
-      margin-top: 1rem;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .news-item {
-      background: white;
-      border-left: 5px solid #444;
-      padding: 1rem;
-      cursor: pointer;
-      transition: 0.2s;
-      border-radius: 6px;
-    }
-
-    .news-item:hover {
-      background: #eee;
-    }
-
-    .footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-    }
-
-    .footer a {
-      color: #aaa;
-      margin: 0 0.7rem;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .footer a:hover {
-      color: white;
-    }
-
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-
-    
-    .modal {
-      background: white;
-      padding: 2rem;
-      max-width: 700px;
-      max-height: 80vh;
-      overflow-y: auto;
-      border-radius: 10px;
-      position: relative;
-      animation: fadein 0.4s ease;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: #444;
-    }
-
-    .modal h2 {
-      margin-top: 0;
-    }
-
-    @keyframes fadein {
-      from { opacity: 0; transform: translateY(-20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .join-code {
-      font-size: 1.5rem;
-      background: #f0f0f0;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    .news-image {
-      width: 100%;
-      margin-top: 1rem;
-      border-radius: 6px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 メンテナンス中</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #121212;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+  h1 {
+    font-size: 10vw;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
+  p {
+    font-size: 2vw;
+    margin-top: 0.5em;
+    color: #bbb;
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  @keyframes fadeIn {
+    to {opacity: 1;}
+  }
+</style>
 </head>
 <body>
-
-<div class="alert">当サイトは実在する都道府県とは一切関係ありません。</div>
-
-<header>
-  <h1>橘海県 - 都市ワールド</h1>
-  <p>美しいワールドを、あなたと。</p>
-</header>
-
-<div class="section">
-  <div class="features">
-    <div><strong>都市ワールド</strong><br>精緻な都市建築と都市計画が広がるワールドです。</div>
-    <div><strong>インフラ整備</strong><br>道路・鉄道・区画整理</div>
-    <div><strong>活発なメンバー</strong><br>多数のメンバーが日々参加し、活発に建築・交流が行われています。</div>
-    <div><strong>建築には申請が必要</strong><br>秩序ある街づくりのため、建築権を得るには基本的に簡単な申請が必要です。</div>
-  </div>
-
-  <div class="button-group">
-    <a class="apply-button" href="https://docs.google.com/forms/d/e/1FAIpQLScSMM0CyI7fW4chgkRj0mwQ1Ztmz9AfDQ0x0wa7xrw60YuOEA/viewform" target="_blank">建築メンバー申請</a>
-    <button class="join-button" onclick="handleJoin()">参加する</button>
-    <a class="apply-button" href="https://discord.gg/ensAH9qhc9" target="_blank" rel="noopener noreferrer">公式Discord 鯖に参加する</a>
-  </div>
-
-  <div class="news-section">
-    <h2>お知らせ</h2>
-    <div class="news-list" id="newsList"></div>
-  </div>
-</div>
-
-<div class="footer">
-  <div>© 橘海県 ゆっくりーむ鯖 - Kikkai City Project</div>
-  <div>
-    <a onclick="openModal('terms')">利用規約</a>
-    <a onclick="openModal('privacy')">プライバシーポリシー</a>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modalContent">
-    <span class="modal-close" onclick="closeModal()">✕</span>
-    <div id="modalBody"></div>
-  </div>
-</div>
+  <h1 class="fade-in">404</h1>
+  <p class="fade-in" style="animation-delay: 1s;">ただいまメンテナンス中です</p>
 
 <script>
-  const newsData = [
-    {
-      title: "ホームページ完成",
-      date: "2025年6月14日",
-      content: "橘海県の公式ホームページが完成しました！ここではメンテナンス情報やお知らせを配信します！",
-      image: "https://media.discordapp.net/attachments/1341384043631214602/1383318492987523124/53a9b5a7b485be36.png?ex=684e5b3d&is=684d09bd&hm=407a4e3df9d0058138ed57cfffa3b54655ec062520da85b63476456b00222658&=&format=webp&quality=lossless&width=1526&height=859"
-    },
-    {
-      title: "国道一号線完成",
-      date: "2025年6月13日",
-      content: "橘海市に国道一号線が完成しました。",
-      image: "https://media.discordapp.net/attachments/1341384043631214602/1383280035363815465/image.png?ex=684e376c&is=684ce5ec&hm=5b710dea9529c4b2388ffeb383efc7fd54a4835b01ec5e528cc78fa9a67cf4d2&=&format=webp&quality=lossless&width=434&height=164"
-    },
-    {
-      title: "新路線が開通",
-      date: "2025年6月13日",
-      content: "新たに水野交通、YR,西武鉄道の路線が開通しました。",
-      image: "https://media.discordapp.net/attachments/1341384043631214602/1383267056203468912/2025-06-14_102950.png?ex=684e2b56&is=684cd9d6&hm=1f53ba3835d0c0e86e085ca794c4b61591354747bf1e520217e0c13bc1fee70d&=&format=webp&quality=lossless&width=1858&height=859"
-    }
-  ];
-
-  const newsList = document.getElementById("newsList");
-  newsData.forEach((item, i) => {
-    const div = document.createElement("div");
-    div.className = "news-item";
-    div.innerHTML = `<strong>${item.title}</strong><br><small>${item.date}</small>`;
-    div.onclick = () => {
-      document.getElementById("modalBody").innerHTML = `
-        <h2>${item.title}</h2>
-        <p><i>${item.date}</i></p>
-        <p>${item.content}</p>
-        ${item.image ? `<img src="${item.image}" class="news-image" />` : ""}
-      `;
-      document.getElementById("modalOverlay").style.display = "flex";
-    };
-    newsList.appendChild(div);
+  document.body.addEventListener('click', () => {
+    location.reload();
   });
-
-  function handleJoin() {
-      window.open("https://realms.gg/eDYtsbffJmTgKJo", "_blank");
-    }
-
-  function openModal(type) {
-    const body = document.getElementById('modalBody');
-    if (type === 'terms') {
-      body.innerHTML = `<h2>利用規約</h2><ul>
-      <li>他プレイヤーへの迷惑行為・妨害は禁止</li>
-      <li>他プレイヤー破壊禁止</li>
-      <li>建築メンバーのルール遵守義務</li>
-　　　<li>運営からの指示には従ってください</li>
-      <li>違反時はBAN等の処置を行います</li></ul>`;
-    } else if (type === 'privacy') {
-      body.innerHTML = `<h2>プライバシーポリシー</h2><p>建築申請フォームで収集された情報は、審査・サーバー管理にのみ使用します。外部への提供は一切ありません。</p>`;
-    }
-    document.getElementById('modalOverlay').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('modalOverlay').style.display = 'none';
-  }
 </script>
-
 </body>
 </html>
